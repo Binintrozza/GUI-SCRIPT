@@ -449,12 +449,12 @@ function OrionLib:MakeNotification(NotificationConfig)
 	end)
 end    
 
-function Yutohub:Init()
-	if Yutohub.SaveCfg then	
+function OrionLib:Init()
+	if OrionLib.SaveCfg then	
 		pcall(function()
-			if isfile(Yutohub.Folder .. "/" .. game.GameId .. ".txt") then
-				LoadCfg(readfile(Yutohub.Folder .. "/" .. game.GameId .. ".txt"))
-				Yutohub:MakeNotification({
+			if isfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt") then
+				LoadCfg(readfile(OrionLib.Folder .. "/" .. game.GameId .. ".txt"))
+				OrionLib:MakeNotification({
 					Name = "Configuration",
 					Content = "Auto-loaded configuration for the game " .. game.GameId .. ".",
 					Time = 5
