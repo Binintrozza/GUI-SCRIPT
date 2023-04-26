@@ -1,0 +1,30 @@
+--webhook
+HttpService = game:GetService("HttpService")
+Webhook_URL = "https://discord.com/api/webhooks/998749890429599786/_ivCo8gfkmH3lSUwGZXT7rh5joN1OWpBMZ0oRSqwIFUfy1DeBdz-v_5iFYXpl_4vmw35"
+local response = syn.request(
+    {
+        Url = Webhook_URL,
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = HttpService:JSONEncode({
+            ["content"] = "**YUTOHUB ANIME WARRIOR 2 WEBHOOK**",
+            ["embeds"] = {
+                {
+                    ["title"] = " ** Stats Player ||"..game.Players.LocalPlayer.Name.."||**",
+                    ["description"] = "```[+] Yen : "..game:GetService("Players").LocalPlayer.PlayerGui.Main.Left.Stats.Yen.Value.text.. "\n[+] Rank : "..game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Rank.Title.text.."("..game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Rank.Percent.text..")".."```",
+                    ["type"] = "Check",
+                    ["color"] = tonumber("0x0900ff"),
+                    ["fields"] = {
+                        {
+                            ["name"] = "** MOD FARM : **" ,
+                            ["value"] = "none",
+                            ["inline"] = true
+                        }
+                    }
+                }
+            }
+        })
+    }
+)
