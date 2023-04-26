@@ -13,7 +13,7 @@ local response = syn.request(
             ["embeds"] = {
                 {
                     ["title"] = " ** Stats Player ||"..game.Players.LocalPlayer.Name.."||**",
-                    ["description"] = "```[+] Yen : "..game:GetService("Players").LocalPlayer.PlayerGui.Main.Left.Stats.Yen.Value.text.. "\n[+] Rank : "..game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Rank.Title.text.."("..game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Rank.Percent.text..")".."```",
+                    ["description"] = "```[+] Yen : ".."GG".. "\n[+] Rank : ".."g".."(".."g"..")".."```",
                     ["type"] = "Check",
                     ["color"] = tonumber("0x0900ff"),
                     ["fields"] = {
