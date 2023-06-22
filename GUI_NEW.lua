@@ -1780,7 +1780,7 @@ c.BackgroundTransparency = 1
 c.BorderSizePixel = 0
 c.Position = UDim2.new(0, 0, 0, 0)
 c.Size = UDim2.new(0, 150, 0, 150)
-c.Image = "rbxassetid://11728128676"
+c.Image = "rbxassetid://12699767780"
 d.CornerRadius = UDim.new(0, 100)
 d.Parent = c
 
