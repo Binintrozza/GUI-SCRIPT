@@ -648,7 +648,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	MakeDraggable(DragPoint, MainWindow)
 
 	AddConnection(CloseBtn.MouseButton1Up, function()
-		MainWindow.Visible = false
+		MainWindow.Visible = true
 		UIHidden = true
 		OrionLib:MakeNotification({
 			Name = "Interface Hidden",
