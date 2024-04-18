@@ -1,0 +1,4 @@
+$ pip install customtkinter
+$ pip install google-generativeai
+$ pip install pyperclip
+$ pip install tkinter
