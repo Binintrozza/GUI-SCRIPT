@@ -1,0 +1,48 @@
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
+
+local Eggwebhook = {
+    ["httpRequest"] =  (syn and syn.request) or http_request or request or (http and http.request) or nil,
+    ["HS"] = game:GetService("HttpService"),
+
+}
+Eggwebhook.httpRequest({
+    Url = getgenv().Linkwrbhook,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = Eggwebhook.HS:JSONEncode( {
+        ["content"] = "<@" .. getgenv().UserID .. ">",
+        ["username"] = "YUTO HUB V3",
+        ["avatar_url"] = "https://media.discordapp.net/attachments/1078304895158988840/1122690877542912201/Thiet_ke_chua_co_ten.gif?width=580&height=580",
+        ["embeds"] = {
+            {
+                ["author"] = {
+                    ["name"] = "Check accunt last stand de cay thue ;)",
+                    ["url"] = "https://discord.gg/2XhfBB9yY4",
+                    ["icon_url"] = "https://media.discordapp.net/attachments/1078304895158988840/1122690877542912201/Thiet_ke_chua_co_ten.gif?width=580&height=580"
+                },
+                ["footer"] = {
+                    ["text"] = "By yuteaz",
+                    ["icon_url"] = "https://media.discordapp.net/attachments/1078304895158988840/1122690877542912201/Thiet_ke_chua_co_ten.gif?width=580&height=580"
+                },
+                ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S.000Z") , 
+                ["title"] = " **Player ||" .. game.Players.LocalPlayer.Name .. "||**",
+                ["description"] = "",
+                ["type"] = "",
+                ["color"] = tonumber("0x7B79CC"),
+                ["thumbnail"] = {
+                    ["url"] = "https://media.discordapp.net/attachments/1078304895158988840/1122690877542912201/Thiet_ke_chua_co_ten.gif?width=580&height=580"
+                },
+                
+                ["fields"] = {
+                    {
+                        ["name"] = "**HWID : **",
+                        ["value"] = "``" ..tostring(HWID).. "``",
+                        ["inline"] = true
+                    },
+                }
+            }
+        }
+    })
+})
