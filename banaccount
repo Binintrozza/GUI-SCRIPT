@@ -1,1 +1,0 @@
-print(game:GetService("ReplicatedStorage").Actions.Action:FireServer())
